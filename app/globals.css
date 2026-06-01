@@ -1,0 +1,358 @@
+/* ===================================================================
+   Rehkitzrettung – globale Styles
+   Naturnahes, freundliches, mobil-first Design (Bauern auf dem Handy).
+   =================================================================== */
+
+:root {
+  --green-900: #1b3a23;
+  --green-700: #2f6b3e;
+  --green-600: #3a824c;
+  --green-500: #4a9d5e;
+  --green-100: #e7f3ea;
+  --green-50: #f3f9f4;
+  --sand: #f7f4ec;
+  --ink: #1f2a22;
+  --muted: #5d6b60;
+  --border: #d7e2da;
+  --white: #ffffff;
+  --shadow: 0 10px 30px rgba(27, 58, 35, 0.08);
+  --radius: 14px;
+  --wa: #25d366;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--sand);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--green-900);
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--green-700);
+}
+
+.container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-narrow {
+  max-width: 640px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.7em 1.4em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.05s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-lg {
+  font-size: 1.05rem;
+  padding: 0.85em 1.7em;
+}
+
+.btn-primary {
+  background: var(--wa);
+  color: #04361a;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+}
+
+.btn-primary:hover {
+  background: #20bd5a;
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--green-700);
+  border: 2px solid var(--green-600);
+}
+
+.btn-secondary:hover {
+  background: var(--green-50);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(160deg, var(--green-700), var(--green-500));
+  color: var(--white);
+  padding: 72px 0 84px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 720px;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  margin-bottom: 0.3em;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 0.35em 1em;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 1.2em;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1.8em;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 64px 0;
+}
+
+.section-alt {
+  background: var(--green-50);
+}
+
+.section h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  text-align: center;
+}
+
+.section-lead {
+  max-width: 680px;
+  margin: 0 auto 2.5em;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* ---------- Cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow);
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.3em;
+}
+
+.card h3 {
+  margin-bottom: 0.4em;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ---------- Steps ---------- */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.steps li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+
+.step-num {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--green-600);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.steps h3 {
+  margin-bottom: 0.2em;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ---------- Form ---------- */
+.form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  color: var(--green-900);
+}
+
+.req {
+  color: #c0392b;
+}
+
+.field input,
+.field textarea {
+  font: inherit;
+  color: var(--ink);
+  padding: 0.7em 0.85em;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: var(--green-50);
+  width: 100%;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--green-500);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(74, 157, 94, 0.18);
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.hint {
+  margin-top: 0.4em;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.actions .btn {
+  flex: 1 1 200px;
+}
+
+.form-error {
+  background: #fdecea;
+  color: #b03028;
+  border: 1px solid #f5c6c2;
+  border-radius: 10px;
+  padding: 0.7em 1em;
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+
+.privacy-note {
+  margin: 18px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--green-900);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #bfe6c8;
+}
+
+.footer .muted {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 48px 0;
+  }
+  .hero {
+    padding: 56px 0 64px;
+  }
+}
