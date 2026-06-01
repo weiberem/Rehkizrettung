@@ -21,4 +21,12 @@ export const config = {
 
   // Region (für Texte)
   region: "Riggisberg / Gantrisch",
+
+  // ---------------------------------------------------------------
+  //  Hintergrundvideo im Hero-Bereich.
+  //  Die ID ist der Teil nach "v=" in der YouTube-URL.
+  //  Beispiel: youtube.com/watch?v=S65oERVrLE0  ->  "S65oERVrLE0"
+  //  Leer lassen ("") = kein Video, nur grüner Hintergrund.
+  // ---------------------------------------------------------------
+  heroVideoId: "S65oERVrLE0",
 } as const;

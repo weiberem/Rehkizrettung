@@ -112,13 +112,55 @@ a {
 
 /* ---------- Hero ---------- */
 .hero {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(160deg, var(--green-700), var(--green-500));
   color: var(--white);
   padding: 72px 0 84px;
   text-align: center;
 }
 
+/* Hero mit Hintergrundvideo etwas höher, damit das Video wirkt */
+.hero-has-video {
+  padding: 120px 0 130px;
+}
+
+/* Hintergrundvideo: deckt den gesamten Hero ab (16:9, zentriert) */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* skaliert so, dass das 16:9-Video die Fläche immer vollständig füllt */
+  width: 100vw;
+  height: 56.25vw; /* 16:9 von der Breite */
+  min-height: 100%;
+  min-width: 177.78vh; /* 16:9 von der Höhe */
+  transform: translate(-50%, -50%);
+  border: 0;
+}
+
+/* Grüner, leicht transparenter Schleier für gute Lesbarkeit der Schrift */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    160deg,
+    rgba(27, 58, 35, 0.72),
+    rgba(58, 130, 76, 0.58)
+  );
+}
+
 .hero-inner {
+  position: relative;
+  z-index: 2;
   max-width: 720px;
 }
 

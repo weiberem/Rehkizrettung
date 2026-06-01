@@ -7,7 +7,18 @@ export default function Home() {
       {/* ---------------------------------------------------------- */}
       {/*  HERO                                                       */}
       {/* ---------------------------------------------------------- */}
-      <header className="hero">
+      <header className={`hero${config.heroVideoId ? " hero-has-video" : ""}`}>
+        {config.heroVideoId && (
+          <div className="hero-video" aria-hidden="true">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${config.heroVideoId}?autoplay=1&mute=1&loop=1&playlist=${config.heroVideoId}&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1&disablekb=1&fs=0`}
+              title="Rehkitzrettung Video"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              tabIndex={-1}
+            />
+          </div>
+        )}
+        <div className="hero-overlay" aria-hidden="true" />
         <div className="container hero-inner">
           <p className="eyebrow">🦌 Region {config.region}</p>
           <h1>Rehkitzrettung mit der Drohne</h1>
